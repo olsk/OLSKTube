@@ -6,7 +6,29 @@
 
 	const mod = {
 
-		OLSKTubeLoad () {
+		OLSKTubeLoad (config) {
+			if (typeof config !== 'object' || config === null) {
+				throw new Error('OLSKErrorInputNotValid');
+			}
+
+			if (typeof config.ParamParent !== 'object' || config.ParamParent === null) {
+				throw new Error('OLSKErrorInputNotValid');
+			}
+
+			if (typeof config.ParamPlaylist !== 'string') {
+				throw new Error('OLSKErrorInputNotValid');
+			}
+
+			if (!config.ParamPlaylist.trim().length) {
+				throw new Error('OLSKErrorInputNotValid');
+			}
+
+			const target = document.createElement('div');
+			
+			config.ParamParent.appendChild(target);
+			
+			target.innerHTML = `<div class="OLSKTube OLSKDecor" lang="en">
+</div>`;
 		},
 
 	};

@@ -4,6 +4,10 @@ locals.OLSKPageAssets = [
 ];
 %>
 
+<div id="TestParent"></div>
+
 <script type="text/javascript">
-	OLSKTube.OLSKTubeLoad();
+	OLSKTube.OLSKTubeLoad(Object.assign(<%- JSON.stringify(OLSKTubeConfig) %>, {
+		ParamParent: window.TestParent,
+	}));
 </script>
