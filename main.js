@@ -156,8 +156,8 @@
 	<iframe class="OLSKTubeEmbed" id="youtube-player" src="https://www.youtube-nocookie.com/embed/videoseries?rel=0&amp;enablejsapi=1&amp;list=${ config.ParamPlaylist }&amp;modestbranding=1${ config.ParamAutoplay ? '&amp;autoplay=1' : '' }" width="100%" height="300" frameborder="0" allow="accelerometer; ${ config.ParamAutoplay ? 'autoplay; ' : '' }clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	<section class="OLSKTubeButtons">
-		<button class="OLSKTubeButtonsPrevious OLSKDecorPressCall" onclick="OLSKTube.CommandPreviousVideo()" disabled>previous</button>
-		<button class="OLSKTubeButtonsNext OLSKDecorPressCall" onclick="OLSKTube.CommandNextVideo()">new snippet</button>
+		<button class="OLSKTubeButtonsPrevious OLSKDecorPressCall" onclick="OLSKTube.CommandPreviousVideo()" disabled>back</button>
+		<button class="OLSKTubeButtonsNext OLSKDecorPressCall" onclick="OLSKTube.CommandNextVideo()">next / zap</button>
 	</section>
 </div>`;
 

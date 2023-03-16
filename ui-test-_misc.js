@@ -47,7 +47,7 @@ describe('OLSKTube_Misc', function () {
 		});
 
 		it('sets text', function () {
-			browser.assert.text(OLSKTubeButtonsPrevious, 'previous');
+			browser.assert.text(OLSKTubeButtonsPrevious, 'back');
 		});
 	
 	});
@@ -59,7 +59,7 @@ describe('OLSKTube_Misc', function () {
 		});
 
 		it('sets text', function () {
-			browser.assert.text(OLSKTubeButtonsNext, 'new snippet');
+			browser.assert.text(OLSKTubeButtonsNext, 'next / zap');
 		});
 	
 	});
