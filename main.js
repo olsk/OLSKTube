@@ -24,7 +24,7 @@
 		_ValuePreviousVideoIDs: [],
 		_ValueCycledVideoIDs: [],
 		_ValueNextVideoIDs: [],
-		_ValueAutoplay: !!document.querySelector('meta[name="tv"]') || false,
+		_ValueAutoplay: false,
 		_ValueDidPlay: false,
 
 		// DATA
@@ -162,6 +162,8 @@
 </div>`;
 
 			window.onYouTubeIframeAPIReady = mod.MessageYouTubeAPIReady;
+
+			mod._ValueAutoplay = config.ParamAutoplay;
 			
 			mod.LifecycleModuleDidLoad();
 		},
