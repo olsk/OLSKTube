@@ -1,4 +1,8 @@
 {
   "name": "OLSKTube",
-  "main": "main.js"
+  "main": "main.js",
+  "devDependencies": {
+    "normalize.css": "latest",
+    "OLSKDecor": "olsk/OLSKDecor"
+  }
 }

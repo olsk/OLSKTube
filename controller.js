@@ -7,7 +7,13 @@ const mod = {
 			OLSKRouteSignature: 'OLSKTubeStubRoute',
 			OLSKRouteFunction (req, res, next) {
 				return res.OLSKExpressLayoutRender(require('path').join(__dirname, 'stub-view'), {
-					OLSKTubeConfig: Object.assign(require('./mocha-start.js').uConfig(), Object.fromEntries((new URLSearchParams(req.query)).entries())),
+					OLSKTubeConfig: Object.assign(require('./mocha-start.js').uConfig(), Object.fromEntries(Array.from((new URLSearchParams(req.query)).entries()).map(function (e) {
+						if (e[0] === 'ParamAutoplay') {
+							e[1] = JSON.parse(e[1]);
+						}
+
+						return e;
+					}))),
 				});
 			},
 		}];
@@ -16,6 +22,12 @@ const mod = {
 	OLSKControllerStaticAssetFiles () {
 		return [
 			'main.js',
+		];
+	},
+
+	OLSKControllerSharedStaticAssetFolders () {
+		return [
+			'node_modules',
 		];
 	},
 

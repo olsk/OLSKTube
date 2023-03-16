@@ -1,0 +1,54 @@
+.OLSKTube {
+	--OLSKTubeButtonColor: white;
+	--OLSKTubeBackgroundColor: black;
+
+	width: 100%;
+	height: 100%;
+
+	/* OLSKDecorHotfix */
+	padding: 0;
+
+	background: var(--OLSKTubeBackgroundColor);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.OLSKTubeEmbed {
+	flex-grow: 1;
+}
+
+@media (max-width: 450px) {
+
+	.OLSKTubeEmbed {
+		flex-grow: 0;
+		flex-basis: 250px;
+	}
+
+}
+
+.OLSKTubeButtons {
+	display: flex;
+}
+
+.OLSKTubeButtons button {
+	height: 40px;
+	margin: 10px;
+	flex-grow: 1;
+	background: var(--OLSKTubeButtonColor) !important;
+	border-color: var(--OLSKTubeButtonColor) !important;
+	color: black !important;
+	border-radius: var(--OLSKBorderRadius);
+}
+
+@media (max-width: 200px) {
+
+	.OLSKTubeButtons button {
+		height: 28px;
+		padding: 0;
+		margin: 4px;
+		
+		font-size: 70%;
+	}
+
+}

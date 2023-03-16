@@ -1,6 +1,10 @@
 <%
 locals.OLSKPageAssets = [
+	'/node_modules/normalize.css/normalize.css',
+	'/node_modules/OLSKDecor/ui-style.css',
+
 	'main.js',
+	'ui-style.css',
 ];
 %>
 
@@ -9,5 +13,14 @@ locals.OLSKPageAssets = [
 <script type="text/javascript">
 	OLSKTube.OLSKTubeLoad(Object.assign(<%- JSON.stringify(OLSKTubeConfig) %>, {
 		ParamParent: window.TestParent,
-	}));
+	}, <%- JSON.stringify(OLSK_SPEC_UI() ? {} : {
+		ParamPlaylist: 'PL6v1zwoKiosMCiOTjwHG63nwuSAP_clUI',
+	}) %>));
 </script>
+
+<style>
+body, #TestParent {
+	width: 100vw;
+	height: 100vh;
+}
+</style>
