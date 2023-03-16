@@ -52,3 +52,8 @@
 	}
 
 }
+
+.OLSKTubeButtonsPrevious {
+	flex-grow: 0;
+	flex-basis: 25%;
+}
