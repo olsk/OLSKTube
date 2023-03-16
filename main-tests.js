@@ -34,4 +34,12 @@ describe('OLSKTubeLoad', function test_OLSKTubeLoad() {
 		}, /OLSKErrorInputNotValid/);
 	});
 
+	it('throws if ParamAutoplay not boolean', function () {
+		throws(function () {
+			mod.OLSKTubeLoad(uConfig({
+				ParamAutoplay: 'true',
+			}));
+		}, /OLSKErrorInputNotValid/);
+	});
+
 });

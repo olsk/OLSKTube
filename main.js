@@ -6,7 +6,7 @@
 
 	const mod = {
 
-		OLSKTubeLoad (config) {
+		OLSKTubeLoad (config, debug) {
 			if (typeof config !== 'object' || config === null) {
 				throw new Error('OLSKErrorInputNotValid');
 			}
@@ -23,7 +23,13 @@
 				throw new Error('OLSKErrorInputNotValid');
 			}
 
-			const target = document.createElement('div');
+			if (config.ParamAutoplay) {
+				if (typeof config.ParamAutoplay !== 'boolean') {
+					throw new Error('OLSKErrorInputNotValid');
+				}
+			}
+
+			const target = (debug.document || document).createElement('div');
 			
 			config.ParamParent.appendChild(target);
 			
