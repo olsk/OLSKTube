@@ -13,7 +13,7 @@ Video zapper / randomizer from YouTube playlists, used to power [rosano.ca/tv](h
 <script type="text/javascript">
 OLSKTube.OLSKTubeLoad({
 	ParamParent: document.getElementById('alfa-bravo-charlie'),
-	ParamPlaylist: 'PL6v1zwoKiosMCiOTjwHG63nwuSAP_clUI', // ID from any YouTube playlist URL starting with https://www.youtube.com/playlist?list=…
+	ParamPlaylist: 'YOUR_PLAYLIST_ID', // ID from any YouTube playlist URL starting with https://www.youtube.com/playlist?list=…
 	ParamAutoplay: true, // default: false
 });
 </script>
