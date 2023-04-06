@@ -15,11 +15,11 @@ describe('OLSKTube_Misc', function () {
 	describe('OLSKTube', function test_OLSKTube() {
 
 		it('classes OLSKDecor', function () {
-			browser.assert.hasClass(OLSKTube, 'OLSKDecor');
+			return browser.assert.hasClass(OLSKTube, 'OLSKDecor');
 		});
 
 		it('sets lang', function () {
-			browser.assert.attribute(OLSKTube, 'lang', 'en');
+			return browser.assert.attribute(OLSKTube, 'lang', 'en');
 		});
 
 	});
@@ -27,15 +27,15 @@ describe('OLSKTube_Misc', function () {
 	describe('OLSKTubeEmbed', function test_OLSKTubeEmbed () {
 
 		it('sets id', function () {
-			browser.assert.attribute(OLSKTubeEmbed, 'id', 'youtube-player');
+			return browser.assert.attribute(OLSKTubeEmbed, 'id', 'youtube-player');
 		});
 
 		it('sets allow', function () {
-			browser.assert.attribute(OLSKTubeEmbed, 'allow', `accelerometer; ${ ParamAutoplay ? 'autoplay; ' : '' }clipboard-write; encrypted-media; gyroscope; picture-in-picture`);
+			return browser.assert.attribute(OLSKTubeEmbed, 'allow', `accelerometer; ${ ParamAutoplay ? 'autoplay; ' : '' }clipboard-write; encrypted-media; gyroscope; picture-in-picture`);
 		});
 
 		it('sets src', function () {
-			browser.assert.attribute(OLSKTubeEmbed, 'src', `https://www.youtube-nocookie.com/embed/videoseries?rel=0&enablejsapi=1&list=${ ParamPlaylist }&modestbranding=1${ ParamAutoplay ? '&autoplay=1' : '' }`);
+			return browser.assert.attribute(OLSKTubeEmbed, 'src', `https://www.youtube-nocookie.com/embed/videoseries?rel=0&enablejsapi=1&list=${ ParamPlaylist }&modestbranding=1${ ParamAutoplay ? '&autoplay=1' : '' }`);
 		});
 
 	});
@@ -43,11 +43,11 @@ describe('OLSKTube_Misc', function () {
 	describe('OLSKTubeButtonsPrevious', function test_OLSKTubeButtonsPrevious () {
 
 		it('classes OLSKDecorPressCall', function () {
-			browser.assert.hasClass(OLSKTubeButtonsPrevious, 'OLSKDecorPressCall');
+			return browser.assert.hasClass(OLSKTubeButtonsPrevious, 'OLSKDecorPressCall');
 		});
 
 		it('sets text', function () {
-			browser.assert.text(OLSKTubeButtonsPrevious, 'back');
+			return browser.assert.text(OLSKTubeButtonsPrevious, 'back');
 		});
 	
 	});
@@ -55,11 +55,11 @@ describe('OLSKTube_Misc', function () {
 	describe('OLSKTubeButtonsNext', function test_OLSKTubeButtonsNext () {
 
 		it('classes OLSKDecorPressCall', function () {
-			browser.assert.hasClass(OLSKTubeButtonsNext, 'OLSKDecorPressCall');
+			return browser.assert.hasClass(OLSKTubeButtonsNext, 'OLSKDecorPressCall');
 		});
 
 		it('sets text', function () {
-			browser.assert.text(OLSKTubeButtonsNext, 'next / zap');
+			return browser.assert.text(OLSKTubeButtonsNext, 'next / zap');
 		});
 	
 	});

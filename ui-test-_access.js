@@ -16,19 +16,19 @@ describe('OLSKTube_Access', function () {
 	});
 
 	it('shows OLSKTube', function () {
-		browser.assert.elements(OLSKTube, 1);
+		return browser.assert.elements(OLSKTube, 1);
 	});
 	
 	it('shows OLSKTubeEmbed', function() {
-		browser.assert.elements(OLSKTubeEmbed, 1);
+		return browser.assert.elements(OLSKTubeEmbed, 1);
 	});
 
 	it('shows OLSKTubeButtonsPrevious', function () {
-		browser.assert.elements(OLSKTubeButtonsPrevious, 1);
+		return browser.assert.elements(OLSKTubeButtonsPrevious, 1);
 	});
 
 	it('shows OLSKTubeButtonsNext', function () {
-		browser.assert.elements(OLSKTubeButtonsNext, 1);
+		return browser.assert.elements(OLSKTubeButtonsNext, 1);
 	});
 
 });
