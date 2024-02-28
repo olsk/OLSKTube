@@ -25,4 +25,4 @@ OLSKTube.OLSKTubeLoad({
 
 ## Questions
 
-Feel free to reach out on [Mastodon](https://mastodon.online/@rosano) or [Twitter](https://twitter.com/rosano).
+Feel free to reach out on [Mastodon](https://rosano.ca/mastodon) or [Twitter](https://rosano.ca/twitter).
